@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/PSD Modul 9/CS/Project
+Eadder
+Z0 w1702471873
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 16
+Z4 dC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD
+Z5 8C:\Users\Edgrant\OneDrive - UNIVERSITAS INDONESIA\Desktop\UI\Pelajaran\Semester 3\PSD\Prak PSD\Finpro-PSD\src\Adder.vhd
+Z6 FC:\Users\Edgrant\OneDrive - UNIVERSITAS INDONESIA\Desktop\UI\Pelajaran\Semester 3\PSD\Prak PSD\Finpro-PSD\src\Adder.vhd
+l0
+L6 1
+VmI6CAH62S4dbR]PIzn[D>0
+!s100 @<D3L[GCQH=>mhoFf6oVZ3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1702471930
+!i10b 1
+Z9 !s108 1702471930.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Edgrant\OneDrive - UNIVERSITAS INDONESIA\Desktop\UI\Pelajaran\Semester 3\PSD\Prak PSD\Finpro-PSD\src\Adder.vhd|
+Z11 !s107 C:\Users\Edgrant\OneDrive - UNIVERSITAS INDONESIA\Desktop\UI\Pelajaran\Semester 3\PSD\Prak PSD\Finpro-PSD\src\Adder.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+Z14 DEx4 work 5 adder 0 22 mI6CAH62S4dbR]PIzn[D>0
+!i122 16
+l50
+Z15 L16 83
+Z16 VRY9WAo?BTV>C6aA6?Vj371
+Z17 !s100 ab<EK;QQ0@6`6_DaKKC]33
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edoubleadder
+w1702470299
+R1
+R2
+R3
+!i122 3
+R4
+R5
+R6
+l0
+L7 1
+V9z?QESH7z6ez7XN_h2=dF2
+!s100 ?2VM]HR@MA@h=1YXLgWcS1
+R7
+32
+!s110 1702470316
+!i10b 1
+!s108 1702470315.000000
+R10
+R11
+!i113 1
+R12
+R13
+Emultiplier
+Z18 w1702391204
+Z19 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+!i122 11
+R4
+Z21 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Multiplier.vhd
+Z22 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Multiplier.vhd
+l0
+L6 1
+V[PehglG@K<fUEJXOFj]TY1
+!s100 Rj4DoR=kdj]WnB?iE7@eH3
+R7
+32
+Z23 !s110 1702471438
+!i10b 1
+Z24 !s108 1702471438.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Multiplier.vhd|
+Z26 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Multiplier.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R19
+R20
+R2
+R3
+DEx4 work 10 multiplier 0 22 [PehglG@K<fUEJXOFj]TY1
+!i122 11
+l18
+L14 38
+VHLgT`bW4MYIoiJPROQDY]2
+!s100 ZCmWP9O?c:fHF]F9d=_nk3
+R7
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
