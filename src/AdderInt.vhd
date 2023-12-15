@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.ALL;
 
 
-entity AdderFloat is
+entity AdderInt is
     Port (
         InAddA : in STD_LOGIC_VECTOR(31 downto 0);
         InAddB : in STD_LOGIC_VECTOR(31 downto 0);
@@ -12,9 +12,9 @@ entity AdderFloat is
         OutOverflow : out STD_LOGIC;
         clk, rst : in STD_LOGIC
     );
-end AdderFloat;
+end AdderInt;
 
-architecture Behavioral of AdderFloat is
+architecture Behavioral of AdderInt is
     signal Sum : unsigned(32 downto 0); -- Intermediate signal for sum, 33 bits to capture overflow
 begin
     -- Dataflow style implementation
