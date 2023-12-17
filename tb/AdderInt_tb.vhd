@@ -49,9 +49,22 @@ begin
         assert OutSum = "00000000000000000000000000000000" report "AdderInt failed on test case 1!" severity failure;
 
         -- Add more test cases here with different inputs and expected outputs
+        InAddA <= (others => '0');  -- Example value
+        InAddB <= (others => '0');  -- Example value
+        wait for 20 ns;
+        assert OutSum = "00000000000000000000000000000000" report "AdderInt failed on test case 1!" severity failure;
 
+        -- Test Case 2
+        InAddA <= "00000000000000000000000000000001";
+        InAddB <= "00000000000000000000000000000010";
+        wait for 20 ns;
+        assert OutSum = "00000000000000000000000000000011" report "AdderInt failed on test case 2!" severity failure;
 
-        -- Add more test cases here with different inputs and expected outputs
+        -- Test Case 3
+        InAddA <= "11111111111111111111111111111111";
+        InAddB <= "00000000000000000000000000000001";
+        wait for 20 ns;
+        assert OutSum = "00000000000000000000000000000000" report "AdderInt failed on test case 3!" severity failure;
 
         wait; -- Stop the simulation
     end process;
