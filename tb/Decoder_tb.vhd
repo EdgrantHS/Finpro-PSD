@@ -7,57 +7,62 @@ entity Adder_tb is
 end entity Adder_tb;
 
 architecture behavior of Adder_tb is 
-    -- Inputs
-    signal AddNumA : std_logic_vector(31 downto 0) := (others => '0');
-    signal AddNumB : std_logic_vector(31 downto 0) := (others => '0');
 
-    -- Outputs
-    signal Sum : std_logic_vector(31 downto 0);
-    signal CarryFlag : std_logic;
+    -- input
+    signal ControlWord : std_logic_vector (64 downto 0);
+
+    -- outputs
+    signal FloatNumA : std_logic_vector (31 downto 0);
+    signal FloatNumB : std_logic_vector (31 downto 0);
+    signal SignSelect : std_logic;
 
 begin
     -- Instantiate the Unit Under Test (UUT)
-    uut: entity work.Adder 
+    uut: entity work.Decoder 
     port map (
-          AddNumA => AddNumA,
-          AddNumB => AddNumB,
-          Sum => Sum,
-          CarryFlag => CarryFlag
+        ControlWord => ControlWord,
+        FloatNumA => FloatNumA,
+        FloatNumB => FloatNumB,
+        SignSelect => SignSelect
     );
 
     
     -- Stimulus process
     stim_proc: process
+        variable AddNumA : std_logic_vector (31 downto 0);
+        variable AddNumB : std_logic_vector (31 downto 0);
+        variable SignSelectVar : std_logic;
     begin        
         -- Case 1
-        AddNumA <= std_logic_vector(to_unsigned(15, 32));
-        AddNumB <= std_logic_vector(to_unsigned(10, 32));
+        AddNumA := std_logic_vector(to_unsigned(15, 32));
+        AddNumB := std_logic_vector(to_unsigned(10, 32));
+        SignSelectVar := '0';
+        ControlWord <= SignSelectVar & AddNumA & AddNumB;
         wait for 100 ps;
-        assert Sum = std_logic_vector(to_unsigned(25, 32)) report "Test failed for case 1" severity error;
+        assert FloatNumA = AddNumA report "Test failed for case 1 - FloatNumA" severity error;
+        assert FloatNumB = AddNumB report "Test failed for case 1 - FloatNumB" severity error;
+        assert SignSelect = SignSelectVar report "Test failed for case 1 - SignSelectVar" severity error;
 
         -- Case 2
-        AddNumA <= std_logic_vector(to_unsigned(123, 32));
-        AddNumB <= std_logic_vector(to_unsigned(456, 32));
+        AddNumA := std_logic_vector(to_unsigned(165, 32));
+        AddNumB := std_logic_vector(to_unsigned(410, 32));
+        SignSelectVar := '0';
+        ControlWord <= SignSelectVar & AddNumA & AddNumB;
         wait for 100 ps;
-        assert Sum = std_logic_vector(to_unsigned(579, 32)) report "Test failed for case 2" severity error;
+        assert FloatNumA = AddNumA report "Test failed for case 1 - FloatNumA" severity error;
+        assert FloatNumB = AddNumB report "Test failed for case 1 - FloatNumB" severity error;
+        assert SignSelect = SignSelectVar report "Test failed for case 1 - SignSelectVar" severity error;
 
+        
         -- Case 3
-        AddNumA <= std_logic_vector(to_unsigned(1223, 32));
-        AddNumB <= std_logic_vector(to_unsigned(4546, 32));
+        AddNumA := std_logic_vector(to_unsigned(65, 32));
+        AddNumB := std_logic_vector(to_unsigned(10, 32));
+        SignSelectVar := '1';
+        ControlWord <= SignSelectVar & AddNumA & AddNumB;
         wait for 100 ps;
-        assert Sum = std_logic_vector(to_unsigned(5769, 32)) report "Test failed for case 3" severity error;
-
-        -- Case 4
-        AddNumA <= std_logic_vector(to_unsigned(1, 32));
-        AddNumB <= "11111111111111111111111111111111";
-        wait for 100 ps;
-        assert CarryFlag = '1' report "Test failed for case 4" severity error;
-        
-
-
-        
-
-        -- Finish simulation
+        assert FloatNumA = AddNumA report "Test failed for case 1 - FloatNumA" severity error;
+        assert FloatNumB = AddNumB report "Test failed for case 1 - FloatNumB" severity error;
+        assert SignSelect = SignSelectVar report "Test failed for case 1 - SignSelectVar" severity error;
         wait;
     end process;
 
