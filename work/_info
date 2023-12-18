@@ -1,0 +1,98 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/PSD
+Eadder
+Z0 w1702908031
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 32
+Z4 dC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD
+Z5 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd
+Z6 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd
+l0
+L5 1
+V^4<3<940OHn9QcEB]acDY0
+!s100 a4E?5iK5JbOhhKgMZSCPH1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1702908039
+!i10b 1
+Z9 !s108 1702908039.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd|
+Z11 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+Z14 DEx4 work 5 adder 0 22 ^4<3<940OHn9QcEB]acDY0
+!i122 32
+l16
+Z15 L14 7
+V1`o1mY`UTHVOfVVGCmL1>1
+!s100 Z><EEhohcB8CMWfn6[mDh0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadder_tb
+Z16 w1702907271
+R1
+R2
+R3
+!i122 21
+R4
+Z17 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd
+Z18 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd
+l0
+L5 1
+V1K7WLH`mSS__7R?g2[?Nm3
+!s100 Se?6dRDIfT9h4WVMFM[in1
+R7
+32
+Z19 !s110 1702907392
+!i10b 1
+Z20 !s108 1702907392.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd|
+Z22 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R14
+R1
+R2
+R3
+DEx4 work 8 adder_tb 0 22 1K7WLH`mSS__7R?g2[?Nm3
+!i122 21
+l18
+L9 51
+V=OKWb_aQ<8X4STDhHG;KJ3
+!s100 @`[dbZoijfCMe<he3HZHU3
+R7
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
