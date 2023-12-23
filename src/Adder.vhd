@@ -65,4 +65,4 @@ begin
     Sum <= std_logic_vector(unsigned(AddNumA) + unsigned(AddNumB));
     CarryFlag <= '1' when ((unsigned('0' & AddNumA) + unsigned('0' & AddNumB)) > to_unsigned(2147483647, 32)) else '0';
 
-    end architecture rtl;
+    end architecture rtl;*/
