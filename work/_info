@@ -140,11 +140,11 @@ R24
 R12
 R13
 Efloatadder
-Z25 w1703430378
+Z25 w1703435391
 R1
 R2
 R3
-!i122 108
+!i122 109
 R4
 Z26 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
 Z27 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
@@ -154,9 +154,9 @@ V1YgS[QNL>il;=<VOc87Xm3
 !s100 ^XaT5HDDLGf^;^l[YfUUP0
 R7
 32
-Z28 !s110 1703430381
+Z28 !s110 1703435419
 !i10b 1
-Z29 !s108 1703430381.000000
+Z29 !s108 1703435419.000000
 Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
 Z31 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
 !i113 1
@@ -166,12 +166,12 @@ Artl
 R1
 R2
 R3
-Z32 DEx4 work 10 floatadder 0 22 1YgS[QNL>il;=<VOc87Xm3
-!i122 108
+DEx4 work 10 floatadder 0 22 1YgS[QNL>il;=<VOc87Xm3
+!i122 109
 l35
-Z33 L18 168
-VD^zK0V5z7KNF1LJb<I^[43
-!s100 ;m@IXDgU?FbMM94_jB7R^1
+L18 170
+V;F>W<lP_nB`fR6?Y3mFI?3
+!s100 bJ>anTZO12of98^VEV;9A2
 R7
 32
 R28
@@ -183,25 +183,25 @@ R31
 R12
 R13
 Etoplevel
-Z34 w1703430091
+Z32 w1703430494
 R1
 R2
 R3
-!i122 106
+!i122 110
 R4
-Z35 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd
-Z36 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd
+Z33 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd
+Z34 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd
 l0
 L5 1
 VHPKiVlGjiF3GWGcmESfRo3
 !s100 6SGC7<[ildMm=cg8V0kD83
 R7
 32
-Z37 !s110 1703430109
+R28
 !i10b 1
-Z38 !s108 1703430109.000000
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd|
-Z40 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd|
+R29
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd|
+Z36 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd|
 !i113 1
 R12
 R13
@@ -209,19 +209,19 @@ Artl
 R1
 R2
 R3
-DEx4 work 8 toplevel 0 22 HPKiVlGjiF3GWGcmESfRo3
-!i122 106
+Z37 DEx4 work 8 toplevel 0 22 HPKiVlGjiF3GWGcmESfRo3
+!i122 110
 l55
-L16 123
-VSbjL15U;aF?hEi:9A9OJo3
-!s100 P`io3UD;g9^SPCV=bc_L:1
+Z38 L16 123
+Z39 VSbjL15U;aF?hEi:9A9OJo3
+Z40 !s100 P`io3UD;g9^SPCV=bc_L:1
 R7
 32
-R37
+R28
 !i10b 1
-R38
-R39
-R40
+R29
+R35
+R36
 !i113 1
 R12
 R13

@@ -68,12 +68,14 @@ begin
         begin
             -- shift right by 'shift' places, also can handle negative
             -- shift values (shift left)
-            if shift >= 0 then
-                result := std_logic_vector(shift_right(unsigned(mantissa), shift));
-            else
-                result := std_logic_vector(shift_left(unsigned(mantissa), -shift));
-            end if;
+            for i in 0 to -shift - 1 loop
+                result := result(22 downto 0) & '0';
+            end loop;
 
+            -- shift values (shift right)
+            for i in 0 to shift - 1 loop
+                result := '0' & result(23 downto 1);
+            end loop;
             return result;
         end function;
 
