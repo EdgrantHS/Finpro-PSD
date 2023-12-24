@@ -82,7 +82,7 @@ begin
         function Assemble(signO : std_logic; exponent : integer; mantissa : std_logic_vector) return std_logic_vector is
             variable result : std_logic_vector(31 downto 0);
         begin
-            result := signO & std_logic_vector(to_signed(exponent, 8)) & mantissa;
+            result := signO & std_logic_vector(to_signed(exponent, 8)) & mantissa (22 downto 0);
             return result;
         end function;
     begin
