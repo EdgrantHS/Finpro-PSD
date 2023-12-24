@@ -13,7 +13,7 @@ Top-Level Design is an aggregation of previous components, forming the main arch
 
 # IMPLEMENTATION IN EACH MODULE
 ## Dataflow Style
-The Sync Float Adder component is designed using the dataflow style. In dataflow architecture, operations are executed whenever their input data becomes available. For the full integer adder implementation:
+The Adder component is designed using the dataflow style. In dataflow architecture, operations are executed whenever their input data becomes available. For the full integer adder implementation:
 ### Objective
 Implement a full integer adder for efficient floating-point addition.
 ### Implementation Explanation
