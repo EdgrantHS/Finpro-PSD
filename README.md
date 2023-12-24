@@ -1,4 +1,4 @@
-# PERFORMANCE OF FPGA FLOATING POINT ADDER (JUDUL, SEMENTARA)
+# PERFORMANCE OF FPGA FLOATING POINT ADDER 
 The project aims to develop a high-performance FLoating Point Adder on a Field-Programmable Gate Array (FPGA). Floating point arithmetic is crucial for a variety of applications that demand high precision. The implementation on an FPGA provides flexibility, parallelism, and optimization possibilities, making it an ideal platform for intensive numerical computations.
 
 # COMPONENT
@@ -63,4 +63,8 @@ Implement microcomputing with a control word format for arithmetic computations.
 Microcomputing involves using a compact control word format to specify the operation and operands. The control word guides the microcomputing unit to perform signed or unsigned addition with the specified operands.
 
 # TESTING
-(input output)
+## Synthesize: 
+<img width="1121" alt="image" src="https://github.com/EdgrantHS/Finpro-PSD/assets/63389410/61a9b900-59fc-4bb6-bbdd-048b38b442da">
+
+## Waveform:
+<img width="1511" alt="image" src="https://github.com/EdgrantHS/Finpro-PSD/assets/63389410/5fcf766e-9f19-4363-8257-487acbeba572">
