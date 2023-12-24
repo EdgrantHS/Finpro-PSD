@@ -90,10 +90,11 @@ begin
         if rst = '1' then
             FloatOut <= (others => '0');
             CarryFlag <= '0';
-            Done <= '1';
+            Done <= '0';
         elsif rising_edge(clk) then
             case state is
                 when idle =>
+                    Done <= '0';
                     next_state <= fetch;
 
                 when fetch =>

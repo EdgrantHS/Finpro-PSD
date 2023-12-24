@@ -89,9 +89,10 @@ begin
                     -- SignSelectDecOut <= '0';
                     -- SignSelectFAIn <= '0';
                     RstFAIn <= '1';
+                    Done <= '0';
                     -- FloatAdderOut <= (others => '0');
                     -- FloatAdderCarryFlag <= '0';
-                    -- FloatAdderDone <= '0';
+                    -- FloatAdderDone <= '0';   
                     -- ControlWordDecIn <= (others => '0');
 
                     next_state <= Decode;
@@ -103,13 +104,14 @@ begin
                     next_state <= Execution;
 
                 when Execution =>
+                    RstFAIn <= '0'; 
+                    FloatNumAFAIn <= FloatNumADecOut;
+                    FloatNumBFAIn <= FloatNumBDecOut;
+                    SignSelectFAIn <= SignSelectDecOut;
+                    
+
                     if FloatAdderDone = '1' then
                         -- Output signals
-                        FloatNumAFAIn <= FloatNumADecOut;
-                        FloatNumBFAIn <= FloatNumBDecOut;
-                        SignSelectFAIn <= SignSelectDecOut;
-                        RstFAIn <= '0';
-
                         next_state <= Output;
                     else
                         next_state <= Execution;
@@ -119,7 +121,7 @@ begin
                     -- Output signals
                     FloatOut <= FloatAdderOut;
                     CarryFlag <= FloatAdderCarryFlag;
-                    Done <= FloatAdderDone;
+                    Done <= '1';
                     
                     next_state <= Idle;
             end case;
