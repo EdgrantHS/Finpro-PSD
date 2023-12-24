@@ -70,4 +70,4 @@ Microcomputing involves using a compact control word format to specify the opera
 <img width="1511" alt="image" src="https://github.com/EdgrantHS/Finpro-PSD/assets/63389410/5fcf766e-9f19-4363-8257-487acbeba572">
 
 
-For more information, see [our report](https://docs.google.com/presentation/d/1HWBhs-hcO2FmkW1dZNwbxAaB9UCuj2YSHrkPxbCVEP4/edit?usp=sharing) in this project.
+For more information, see [our report]([https://docs.google.com/presentation/d/1HWBhs-hcO2FmkW1dZNwbxAaB9UCuj2YSHrkPxbCVEP4/edit?usp=sharing](https://github.com/EdgrantHS/Finpro-PSD/blob/main/PPT_BP04_Implementasi%20Penjumlahan%20Angka%20Floating%20Point%20FPGA.pdf)https://github.com/EdgrantHS/Finpro-PSD/blob/main/PPT_BP04_Implementasi%20Penjumlahan%20Angka%20Floating%20Point%20FPGA.pdf) in this project.
