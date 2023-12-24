@@ -33,6 +33,7 @@ architecture rtl of FloatAdder is
 
     signal differnce : integer;
 begin
+    -- main process
     main: process (clk, rst)     
         -- Function getFraction(float32 number) -> (SLV(sign + mantissa)):
         --     // Extract sign and mantissa from the 32-bit floating-point number    
@@ -60,7 +61,6 @@ begin
             result := number(31);
             return result;
         end function;
-
         -- Function ShiftRight(SLV mantissa, int shift):
         --     // Right shift/left the mantissa by 'shift' places, handling overflow/underflow
         function ShiftRight(mantissa : std_logic_vector; shift : integer) return std_logic_vector is
