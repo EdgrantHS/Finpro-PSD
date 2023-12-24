@@ -27,15 +27,15 @@ architecture rtl of Testbench_FloatAdder is
     signal    CarryFlag, Done   : std_logic;
 
 begin
-    UUT: FloatAdder port map (FloatNumA  => input1,
-                              FloatNumB  => input2,
-                              clk        => clk,
-                              rst        => rst,
-                              SignSelect => SignSelect,
-                              FloatOut   => expected_output,
-                              CarryFlag  => CarryFlag,
-                              Done       => Done
-                        );
+    UUT: entity work.FloatAdder port map (FloatNumA  => input1,
+                                          FloatNumB  => input2,
+                                          clk        => clk,
+                                          rst        => rst,
+                                          SignSelect => SignSelect,
+                                          FloatOut   => expected_output,
+                                          CarryFlag  => CarryFlag,
+                                          Done       => Done
+                                    );
 
     test_bench: process
     begin
