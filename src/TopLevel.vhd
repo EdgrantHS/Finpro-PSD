@@ -125,4 +125,12 @@ begin
             end case;
         end if;
     end process;
+
+    -- handle states
+    process(clk)
+    begin
+        if falling_edge(clk) then
+            state <= next_state;
+        end if;
+    end process;
 end architecture rtl;
