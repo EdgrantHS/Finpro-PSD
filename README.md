@@ -1,4 +1,4 @@
-# PERFORMANCE OF FPGA FLOATING POINT ADDER 
+# Implementasi Penjumlahan Angka Floating Point FPGA
 The project aims to develop a high-performance FLoating Point Adder on a Field-Programmable Gate Array (FPGA). Floating point arithmetic is crucial for a variety of applications that demand high precision. The implementation on an FPGA provides flexibility, parallelism, and optimization possibilities, making it an ideal platform for intensive numerical computations.
 
 # COMPONENT
