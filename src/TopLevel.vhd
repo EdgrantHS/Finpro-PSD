@@ -29,33 +29,33 @@ architecture rtl of TopLevel is
     signal FloatAdderDone       : std_logic;
     signal ControlWordDecIn : std_logic_vector (64 downto 0);
 
-    -- -- Component Declarations
-    -- component Decoder
-    --     port (
-    --         ControlWord : in std_logic_vector (64 downto 0);
-    --         FloatNumA   : out std_logic_vector (31 downto 0);
-    --         FloatNumB   : out std_logic_vector (31 downto 0);
-    --         SignSelect  : out std_logic
-    --     );
-    -- end component;
+    -- Component Declarations
+    component Decoder
+        port (
+            ControlWord : in std_logic_vector (64 downto 0);
+            FloatNumA   : out std_logic_vector (31 downto 0);
+            FloatNumB   : out std_logic_vector (31 downto 0);
+            SignSelect  : out std_logic
+        );
+    end component;
 
-    -- component FloatAdder
-    --     port (
-    --         FloatNumA   : in std_logic_vector (31 downto 0);
-    --         FloatNumB   : in std_logic_vector (31 downto 0);
-    --         clk         : in std_logic;
-    --         rst         : in std_logic;
-    --         SignSelect  : in std_logic;
-    --         FloatOut    : out std_logic_vector (31 downto 0);
-    --         CarryFlag   : out std_logic;
-    --         Done        : out std_logic
-    --     );
-    -- end component;
+    component FloatAdder
+        port (
+            FloatNumA   : in std_logic_vector (31 downto 0);
+            FloatNumB   : in std_logic_vector (31 downto 0);
+            clk         : in std_logic;
+            rst         : in std_logic;
+            SignSelect  : in std_logic;
+            FloatOut    : out std_logic_vector (31 downto 0);
+            CarryFlag   : out std_logic;
+            Done        : out std_logic
+        );
+    end component;
 
 begin
 
     -- Instantiate the Decoder
-    Decoder_inst : entity work.Decoder
+    Decoder_inst : Decoder
         port map (
             ControlWord => ControlWordDecIn,
             FloatNumA   => FloatNumADecOut,
@@ -64,7 +64,7 @@ begin
         );
 
     -- Instantiate the FloatAdder
-    FloatAdder_inst : entity work.FloatAdder
+    FloatAdder_inst : FloatAdder
         port map (
             FloatNumA   => FloatNumAFAIn,
             FloatNumB   => FloatNumBFAIn,
@@ -78,9 +78,7 @@ begin
 
     process(clk, rst)
     begin
-        if rst = '1' then
-            state <= Idle;
-        elsif rising_edge(clk) then
+        if rising_edge(clk) then
             case state is
                 when Idle =>
                     -- reset signals    
