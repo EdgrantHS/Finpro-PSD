@@ -10,23 +10,23 @@ z2
 cModel Technology
 dD:/PSD
 Eadder
-Z0 w1703340339
+Z0 w1703403278
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 45
+!i122 60
 Z4 dC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD
 Z5 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd
 Z6 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd
 l0
 L5 1
-VhfA9Y0IFClReEzc<W6R>U3
-!s100 cPD6MXPH:RdORGeHUY0D32
+ViTe5iP5J1mCFW`AmOJDRM3
+!s100 eBQA3jMhXdYi1;E[g>HbM2
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1703340342
+Z8 !s110 1703403280
 !i10b 1
-Z9 !s108 1703340342.000000
+Z9 !s108 1703403280.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd|
 Z11 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Adder.vhd|
 !i113 1
@@ -36,8 +36,8 @@ Artl
 R1
 R2
 R3
-Z14 DEx4 work 5 adder 0 22 hfA9Y0IFClReEzc<W6R>U3
-!i122 45
+DEx4 work 5 adder 0 22 iTe5iP5J1mCFW`AmOJDRM3
+!i122 60
 l25
 L14 25
 V0U9MX]oK[cGEbDZbgzAAj2
@@ -53,46 +53,46 @@ R11
 R12
 R13
 Eadder_tb
-Z15 w1702908699
+Z14 w1702910081
 R1
 R2
 R3
-!i122 47
+!i122 58
 R4
-Z16 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd
-Z17 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd
+Z15 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd
+Z16 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd
 l0
 L5 1
 V1K7WLH`mSS__7R?g2[?Nm3
 !s100 Se?6dRDIfT9h4WVMFM[in1
 R7
 32
-Z18 !s110 1703340484
+Z17 !s110 1703403194
 !i10b 1
-Z19 !s108 1703340484.000000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd|
-Z21 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Adder_tb.vhd|
+Z18 !s108 1703403194.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd|
+Z20 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd|
 !i113 1
 R12
 R13
 Abehavior
-R14
+Z21 DEx4 work 7 decoder 0 22 5hlWMieAn^Oi?kaIBCa4o2
 R1
 R2
 R3
 DEx4 work 8 adder_tb 0 22 1K7WLH`mSS__7R?g2[?Nm3
-!i122 47
-l18
-L9 56
-V:MN?XkaC6Z]aNea_W2z@>3
-!s100 >@c`J^dozg`Rf1B1jcfjn3
+!i122 58
+l19
+L9 61
+Vf@RIVdh@o2NKdbNIEZkHR3
+!s100 G7W:Tg<kE^d:7E4k3hf?U1
 R7
 32
-R18
+R17
 !i10b 1
+R18
 R19
 R20
-R21
 !i113 1
 R12
 R13
@@ -101,7 +101,7 @@ Z22 w1702910164
 R1
 R2
 R3
-!i122 39
+!i122 57
 R4
 Z23 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd
 Z24 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd
@@ -111,11 +111,11 @@ V5hlWMieAn^Oi?kaIBCa4o2
 !s100 TbhG1gAi6:F9mT]BUohAH2
 R7
 32
-Z25 !s110 1702910166
+R17
 !i10b 1
-Z26 !s108 1702910166.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
-Z28 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
+R18
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
+Z26 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
 !i113 1
 R12
 R13
@@ -123,42 +123,42 @@ Artl
 R1
 R2
 R3
-DEx4 work 7 decoder 0 22 5hlWMieAn^Oi?kaIBCa4o2
-!i122 39
+R21
+!i122 57
 l16
 L14 7
 VDJ73PJFYXnj3>bWDlc?=92
 !s100 P4cj_5T7fkKl3Wd<bjGiC3
 R7
 32
-R25
+R17
 !i10b 1
+R18
+R25
 R26
-R27
-R28
 !i113 1
 R12
 R13
 Efloatadder
-Z29 w1703349704
+Z27 w1703403513
 R1
 R2
 R3
-!i122 54
+!i122 67
 R4
-Z30 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
-Z31 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
+Z28 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
+Z29 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
 l0
 L5 1
 V1YgS[QNL>il;=<VOc87Xm3
 !s100 ^XaT5HDDLGf^;^l[YfUUP0
 R7
 32
-Z32 !s110 1703349709
+Z30 !s110 1703403515
 !i10b 1
-Z33 !s108 1703349709.000000
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
-!s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
+Z31 !s108 1703403515.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
+Z33 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
 !i113 1
 R12
 R13
@@ -166,19 +166,19 @@ Artl
 R1
 R2
 R3
-DEx4 work 10 floatadder 0 22 1YgS[QNL>il;=<VOc87Xm3
-!i122 54
-l31
-L18 150
-V41o5SS_U9IBLD@b=MIZRY0
-!s100 ^6lJ7m5M[k6l6[8dL@3<`1
+Z34 DEx4 work 10 floatadder 0 22 1YgS[QNL>il;=<VOc87Xm3
+!i122 67
+l27
+L18 169
+V7J51n=B8dHn0>a69kbM731
+!s100 Lz`JDc7YjN7_=zFG]9@RO2
 R7
 32
-R32
+R30
 !i10b 1
+R31
+R32
 R33
-R34
-Z35 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
 !i113 1
 R12
 R13

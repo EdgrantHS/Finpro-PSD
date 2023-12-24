@@ -6,11 +6,11 @@ entity Adder is
     port (
         AddNumA : in std_logic_vector(31 downto 0);
         AddNumB : in std_logic_vector(31 downto 0);
-        Sum : out std_logic_vector(31 downto 0);
-        CarryFlag : out std_logic
+        Sum : out std_logic_vector(31 downto 0); CarryFlag : out std_logic
     );
 end entity Adder;
 
+-- FullAdderBit function
 architecture rtl of Adder is
     function FullAdderBit(A, B, Cin : std_logic) return std_logic_vector is
         variable SumBit : std_logic_vector(0 to 1);

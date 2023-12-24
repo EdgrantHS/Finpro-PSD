@@ -23,10 +23,6 @@ architecture rtl of FloatAdder is
     signal next_state : StateType := idle;
 
 
-    signal signA, signB : std_logic;
-    signal exponentA, exponentB : std_logic_vector(7 downto 0);
-    signal mantissaA, mantissaB : std_logic_vector(23 downto 0);
-    signal exponent, mantissa : std_logic_vector(7 downto 0);
 
 begin
     main: process (clk, rst)     
@@ -35,16 +31,25 @@ begin
         function getFraction(number : std_logic_vector) return std_logic_vector is
             variable result : std_logic_vector(23 downto 0);
         begin
-            result := number(31) & number(22 downto 0);
+            result := '1' & number(22 downto 0);
             return result;
         end function;
 
         -- Function getExponent(float32 number) -> (SLV exponent):
         --     // Extract exponent from the 32-bit floating-point number
-        function getExponent(number : std_logic_vector) return std_logic_vector is
-            variable result : std_logic_vector(7 downto 0);
+        function getExponent(number : std_logic_vector) return integer is
+            variable result : integer;
         begin
-            result := number(30 downto 23);
+            result := to_integer(unsigned(number(30 downto 23))) - 127;
+            return result;
+        end function;
+
+        -- Function getSign(float32 number) -> (SLV sign):
+        --     // Extract sign from the 32-bit floating-point number
+        function getSign(number : std_logic_vector) return std_logic is
+            variable result : std_logic;
+        begin
+            result := number(31);
             return result;
         end function;
 
@@ -66,18 +71,23 @@ begin
 
         -- Function Assemble(mantissa, exponent) -> float32:
         --     // Assemble the 32-bit floating-point number from sign, exponent, and mantissa
-        function Assemble(signO : std_logic; exponent : std_logic_vector; mantissa : std_logic_vector) return std_logic_vector is
+        function Assemble(signO : std_logic; exponent : integer; mantissa : std_logic_vector) return std_logic_vector is
             variable result : std_logic_vector(31 downto 0);
         begin
-            result := signO & exponent & mantissa;
+            result := signO & std_logic_vector(to_signed(exponent, 8)) & mantissa;
             return result;
         end function;
 
         -- Variable declarations
         variable signO : std_logic;
-        variable exponent : std_logic_vector(7 downto 0);
+        variable exponent : integer;
         variable mantissa : std_logic_vector(23 downto 0);
 
+        variable signA, signB : std_logic;
+        variable exponentA, exponentB : integer;
+        variable mantissaA, mantissaB : std_logic_vector(23 downto 0);
+
+        variable differnce : integer;
     begin
 
         if rst = '1' then
@@ -99,29 +109,30 @@ begin
                     else 
                         next_state <= decode;
                     end if;
-
                 when decode =>
                     -- Step 1: Decompose each number into sign, exponent, and mantissa
-                    signA     <= getFraction(FloatNumA)(31);
-                    exponentA <= getExponent(FloatNumA);
-                    mantissaA <= getFraction(FloatNumA)(22 downto 0);
+                    signA     := getSign(FloatNumA);
+                    exponentA := getExponent(FloatNumA);
+                    mantissaA := getFraction(FloatNumA);
             
-                    signB     <= getFraction(FloatNumB)(31);
-                    exponentB <= getExponent(FloatNumB);
-                    mantissaB <= getFraction(FloatNumB)(22 downto 0);
+                    signB     := getSign(FloatNumB);
+                    exponentB := getExponent(FloatNumB);
+                    mantissaB := getFraction(FloatNumB);
                     Done <= '0';
                     next_state <= shift;
 
                 when shift =>
                     -- Step 3: Align the mantissas
                     if exponentA > exponentB then
-                        mantissaB <= ShiftRight(mantissaB, to_integer(unsigned(exponentA) - unsigned(exponentB)));
+                        mantissaB := ShiftRight(mantissaB, exponentA - exponentB);
                         exponent  := exponentA;
                     else
-                        mantissaA <= ShiftRight(mantissaA, to_integer(unsigned(exponentB) - unsigned(exponentA)));
+                        mantissaA := ShiftRight(mantissaA, exponentB - exponentA);
                         exponent  := exponentB;
                     end if;
-    
+
+                    differnce := exponentA - exponentB;
+                    
                     next_state <= add;
 
                 when add =>
@@ -142,6 +153,14 @@ begin
 
                 when output =>
                     -- Step 5: Normalize the result
+                    exponent := exponent + 127;
+                    mantissa := ShiftRight(mantissa, 1);
+                    if mantissa(23) = '1' then
+                        exponent := exponent + 1;
+                        mantissa := ShiftRight(mantissa, 1);
+                    end if;
+
+
                     -- Step 6: Assemble the result
                     FloatOut <= Assemble(signO, exponent, mantissa);
                     CarryFlag <= '0';
