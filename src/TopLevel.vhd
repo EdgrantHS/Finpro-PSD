@@ -14,16 +14,20 @@ entity TopLevel is
 end entity TopLevel;
 
 architecture rtl of TopLevel is
-    type StateType is (Idle, Decode, Execution);
+    type StateType is (Idle, Decode, Execution, Output);
     signal state : StateType := Idle;
     signal next_state : StateType := Idle;
 
-    signal FloatNumA, FloatNumB : std_logic_vector(31 downto 0);
-    signal SignSelect           : std_logic;
+    signal FloatNumADecOut, FloatNumBDecOut : std_logic_vector(31 downto 0);
+    signal FloatNumAFAIn, FloatNumBFAIn : std_logic_vector(31 downto 0);
+    signal SignSelectDecOut     : std_logic;
+    signal SignSelectFAIn     : std_logic;
+    signal RstFAIn     : std_logic;
 
     signal FloatAdderOut        : std_logic_vector(31 downto 0);
     signal FloatAdderCarryFlag  : std_logic;
     signal FloatAdderDone       : std_logic;
+    signal ControlWordDecIn : std_logic_vector (64 downto 0);
 
     -- Component Declarations
     component Decoder
@@ -57,20 +61,50 @@ begin
             case state is
                 when Idle =>
                     if rising_edge(clk) then
+                        -- reset signals
+                        FloatNumADecOut <= (others => '0');
+                        FloatNumBDecOut <= (others => '0');
+                        FloatNumAFAIn <= (others => '0');
+                        FloatNumBFAIn <= (others => '0');
+                        SignSelectDecOut <= '0';
+                        SignSelectFAIn <= '0';
+                        RstFAIn <= '1';
+                        FloatAdderOut <= (others => '0');
+                        FloatAdderCarryFlag <= '0';
+                        FloatAdderDone <= '0';
+                        ControlWordDecIn <= (others => '0');
+
                         next_state <= Decode;
                     end if;
                     
                 when Decode =>
                     if rising_edge(clk) then
+                        -- Input signals
+                        ControlWordDecIn <= ControlWord;
+                            
                         next_state <= Execution;
                     end if;
 
                 when Execution =>
                     if FloatAdderDone = '1' then
-                        next_state <= Idle;
+                        -- Output signals
+                        FloatNumAFAIn <= FloatNumADecOut;
+                        FloatNumBFAIn <= FloatNumBDecOut;
+                        SignSelectFAIn <= SignSelectDecOut;
+                        RstFAIn <= '0';
+
+                        next_state <= Output;
                     else
                         next_state <= Execution;
                     end if;
+
+                when Output =>
+                    -- Output signals
+                    FloatOut <= FloatAdderOut;
+                    CarryFlag <= FloatAdderCarryFlag;
+                    Done <= FloatAdderDone;
+                    
+                    next_state <= Idle;
             end case;
         end if;
     end process;
@@ -78,27 +112,22 @@ begin
     -- Instantiate the Decoder
     Decoder_inst : Decoder
         port map (
-            ControlWord => ControlWord,
-            FloatNumA   => FloatNumA,
-            FloatNumB   => FloatNumB,
-            SignSelect  => SignSelect
+            ControlWord => ControlWordDecIn,
+            FloatNumA   => FloatNumADecOut,
+            FloatNumB   => FloatNumBDecOut,
+            SignSelect  => SignSelectDecOut
         );
 
     -- Instantiate the FloatAdder
     FloatAdder_inst : FloatAdder
         port map (
-            FloatNumA   => FloatNumA,
-            FloatNumB   => FloatNumB,
+            FloatNumA   => FloatNumAFAIn,
+            FloatNumB   => FloatNumBFAIn,
             clk         => clk,
-            rst         => rst,
-            SignSelect  => SignSelect,
+            rst         => RstFAIn,
+            SignSelect  => SignSelectFAIn,
             FloatOut    => FloatAdderOut,
             CarryFlag   => FloatAdderCarryFlag,
             Done        => FloatAdderDone
         );
-    
-        -- Output signals
-    FloatOut <= FloatAdderOut;
-    CarryFlag <= FloatAdderCarryFlag;
-    Done <= FloatAdderDone;
 end architecture rtl;
