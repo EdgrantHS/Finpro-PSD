@@ -84,17 +84,17 @@ begin
             case state is
                 when Idle =>
                     -- reset signals    
-                    FloatNumADecOut <= (others => '0');
-                    FloatNumBDecOut <= (others => '0');
-                    FloatNumAFAIn <= (others => '0');
-                    FloatNumBFAIn <= (others => '0');
-                    SignSelectDecOut <= '0';
-                    SignSelectFAIn <= '0';
+                    -- FloatNumADecOut <= (others => '0');
+                    -- FloatNumBDecOut <= (others => '0');
+                    -- FloatNumAFAIn <= (others => '0');
+                    -- FloatNumBFAIn <= (others => '0');
+                    -- SignSelectDecOut <= '0';
+                    -- SignSelectFAIn <= '0';
                     RstFAIn <= '1';
-                    FloatAdderOut <= (others => '0');
-                    FloatAdderCarryFlag <= '0';
-                    FloatAdderDone <= '0';
-                    ControlWordDecIn <= (others => '0');
+                    -- FloatAdderOut <= (others => '0');
+                    -- FloatAdderCarryFlag <= '0';
+                    -- FloatAdderDone <= '0';
+                    -- ControlWordDecIn <= (others => '0');
 
                     next_state <= Decode;
                     
