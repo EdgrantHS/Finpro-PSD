@@ -36,7 +36,7 @@ Artl
 R1
 R2
 R3
-Z14 DEx4 work 5 adder 0 22 iTe5iP5J1mCFW`AmOJDRM3
+DEx4 work 5 adder 0 22 iTe5iP5J1mCFW`AmOJDRM3
 !i122 86
 l25
 L14 25
@@ -59,24 +59,24 @@ R2
 R3
 !i122 75
 R4
-Z15 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd
-Z16 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd
+Z14 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd
+Z15 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd
 l0
 L5 1
 V1K7WLH`mSS__7R?g2[?Nm3
 !s100 Se?6dRDIfT9h4WVMFM[in1
 R7
 32
-Z17 !s110 1703408282
+Z16 !s110 1703408282
 !i10b 1
-Z18 !s108 1703408282.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd|
-Z20 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd|
+Z17 !s108 1703408282.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd|
+Z19 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/tb/Decoder_tb.vhd|
 !i113 1
 R12
 R13
 Abehavior
-Z21 DEx4 work 7 decoder 0 22 5hlWMieAn^Oi?kaIBCa4o2
+Z20 DEx4 work 7 decoder 0 22 5hlWMieAn^Oi?kaIBCa4o2
 R1
 R2
 R3
@@ -88,11 +88,11 @@ Vf@RIVdh@o2NKdbNIEZkHR3
 !s100 G7W:Tg<kE^d:7E4k3hf?U1
 R7
 32
-R17
+R16
 !i10b 1
+R17
 R18
 R19
-R20
 !i113 1
 R12
 R13
@@ -103,19 +103,19 @@ R2
 R3
 !i122 74
 R4
-Z22 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd
-Z23 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd
+Z21 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd
+Z22 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd
 l0
 L5 1
 V5hlWMieAn^Oi?kaIBCa4o2
 !s100 TbhG1gAi6:F9mT]BUohAH2
 R7
 32
-R17
+R16
 !i10b 1
-R18
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
-Z25 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
+R17
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
+Z24 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/Decoder.vhd|
 !i113 1
 R12
 R13
@@ -123,7 +123,7 @@ Artl
 R1
 R2
 R3
-R21
+R20
 !i122 74
 l16
 L14 7
@@ -131,34 +131,34 @@ VDJ73PJFYXnj3>bWDlc?=92
 !s100 P4cj_5T7fkKl3Wd<bjGiC3
 R7
 32
-R17
+R16
 !i10b 1
-R18
+R17
+R23
 R24
-R25
 !i113 1
 R12
 R13
 Efloatadder
-Z26 w1703419596
+Z25 w1703419596
 R1
 R2
 R3
 !i122 95
 R4
-Z27 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
-Z28 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
+Z26 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
+Z27 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd
 l0
 L5 1
 V1YgS[QNL>il;=<VOc87Xm3
 !s100 ^XaT5HDDLGf^;^l[YfUUP0
 R7
 32
-Z29 !s110 1703419604
+Z28 !s110 1703419604
 !i10b 1
-Z30 !s108 1703419604.000000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
-Z32 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
+Z29 !s108 1703419604.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
+Z31 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/FloatAdder.vhd|
 !i113 1
 R12
 R13
@@ -166,7 +166,7 @@ Artl
 R1
 R2
 R3
-Z33 DEx4 work 10 floatadder 0 22 1YgS[QNL>il;=<VOc87Xm3
+DEx4 work 10 floatadder 0 22 1YgS[QNL>il;=<VOc87Xm3
 !i122 95
 l35
 L18 167
@@ -174,11 +174,54 @@ V7Eo[]WGKQ[6l4O<a9?<OL3
 !s100 dCd]L19WcB<5XfJGhQJ3d0
 R7
 32
-R29
+R28
 !i10b 1
+R29
 R30
 R31
-R32
+!i113 1
+R12
+R13
+Etoplevel
+Z32 w1703425921
+R1
+R2
+R3
+!i122 98
+R4
+Z33 8C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd
+Z34 FC:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd
+l0
+L5 1
+VHPKiVlGjiF3GWGcmESfRo3
+!s100 6SGC7<[ildMm=cg8V0kD83
+R7
+32
+Z35 !s110 1703425924
+!i10b 1
+Z36 !s108 1703425924.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd|
+Z38 !s107 C:/Users/Edgrant/OneDrive - UNIVERSITAS INDONESIA/Desktop/UI/Pelajaran/Semester 3/PSD/Prak PSD/Finpro-PSD/src/TopLevel.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z39 DEx4 work 8 toplevel 0 22 HPKiVlGjiF3GWGcmESfRo3
+!i122 98
+l55
+L16 115
+VVI6kDeS33YY?`C<2kd]6h1
+!s100 bB0SNb7^_ZdVj2nUel2[K3
+R7
+32
+R35
+!i10b 1
+R36
+R37
+R38
 !i113 1
 R12
 R13

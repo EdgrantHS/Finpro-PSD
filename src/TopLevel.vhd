@@ -53,6 +53,29 @@ architecture rtl of TopLevel is
     end component;
 
 begin
+
+    -- Instantiate the Decoder
+    Decoder_inst : Decoder
+        port map (
+            ControlWord => ControlWordDecIn,
+            FloatNumA   => FloatNumADecOut,
+            FloatNumB   => FloatNumBDecOut,
+            SignSelect  => SignSelectDecOut
+        );
+
+    -- Instantiate the FloatAdder
+    FloatAdder_inst : FloatAdder
+        port map (
+            FloatNumA   => FloatNumAFAIn,
+            FloatNumB   => FloatNumBFAIn,
+            clk         => clk,
+            rst         => RstFAIn,
+            SignSelect  => SignSelectFAIn,
+            FloatOut    => FloatAdderOut,
+            CarryFlag   => FloatAdderCarryFlag,
+            Done        => FloatAdderDone
+        );
+
     process(clk, rst)
     begin
         if rst = '1' then
@@ -60,30 +83,26 @@ begin
         elsif rising_edge(clk) then
             case state is
                 when Idle =>
-                    if rising_edge(clk) then
-                        -- reset signals
-                        FloatNumADecOut <= (others => '0');
-                        FloatNumBDecOut <= (others => '0');
-                        FloatNumAFAIn <= (others => '0');
-                        FloatNumBFAIn <= (others => '0');
-                        SignSelectDecOut <= '0';
-                        SignSelectFAIn <= '0';
-                        RstFAIn <= '1';
-                        FloatAdderOut <= (others => '0');
-                        FloatAdderCarryFlag <= '0';
-                        FloatAdderDone <= '0';
-                        ControlWordDecIn <= (others => '0');
+                    -- reset signals    
+                    FloatNumADecOut <= (others => '0');
+                    FloatNumBDecOut <= (others => '0');
+                    FloatNumAFAIn <= (others => '0');
+                    FloatNumBFAIn <= (others => '0');
+                    SignSelectDecOut <= '0';
+                    SignSelectFAIn <= '0';
+                    RstFAIn <= '1';
+                    FloatAdderOut <= (others => '0');
+                    FloatAdderCarryFlag <= '0';
+                    FloatAdderDone <= '0';
+                    ControlWordDecIn <= (others => '0');
 
-                        next_state <= Decode;
-                    end if;
+                    next_state <= Decode;
                     
                 when Decode =>
-                    if rising_edge(clk) then
-                        -- Input signals
-                        ControlWordDecIn <= ControlWord;
-                            
-                        next_state <= Execution;
-                    end if;
+                    -- Input signals
+                    ControlWordDecIn <= ControlWord;
+                        
+                    next_state <= Execution;
 
                 when Execution =>
                     if FloatAdderDone = '1' then
@@ -108,26 +127,4 @@ begin
             end case;
         end if;
     end process;
-
-    -- Instantiate the Decoder
-    Decoder_inst : Decoder
-        port map (
-            ControlWord => ControlWordDecIn,
-            FloatNumA   => FloatNumADecOut,
-            FloatNumB   => FloatNumBDecOut,
-            SignSelect  => SignSelectDecOut
-        );
-
-    -- Instantiate the FloatAdder
-    FloatAdder_inst : FloatAdder
-        port map (
-            FloatNumA   => FloatNumAFAIn,
-            FloatNumB   => FloatNumBFAIn,
-            clk         => clk,
-            rst         => RstFAIn,
-            SignSelect  => SignSelectFAIn,
-            FloatOut    => FloatAdderOut,
-            CarryFlag   => FloatAdderCarryFlag,
-            Done        => FloatAdderDone
-        );
 end architecture rtl;
