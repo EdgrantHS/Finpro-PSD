@@ -22,8 +22,16 @@ architecture rtl of FloatAdder is
     signal state : StateType := idle;
     signal next_state : StateType := idle;
 
+    -- Variable declarations
+    signal signO : std_logic;
+    signal exponent : integer;
+    signal mantissa : std_logic_vector(23 downto 0);
 
+    signal signA, signB : std_logic;
+    signal exponentA, exponentB : integer;
+    signal mantissaA, mantissaB : std_logic_vector(23 downto 0);
 
+    signal differnce : integer;
 begin
     main: process (clk, rst)     
         -- Function getFraction(float32 number) -> (SLV(sign + mantissa)):
@@ -77,17 +85,6 @@ begin
             result := signO & std_logic_vector(to_signed(exponent, 8)) & mantissa;
             return result;
         end function;
-
-        -- Variable declarations
-        variable signO : std_logic;
-        variable exponent : integer;
-        variable mantissa : std_logic_vector(23 downto 0);
-
-        variable signA, signB : std_logic;
-        variable exponentA, exponentB : integer;
-        variable mantissaA, mantissaB : std_logic_vector(23 downto 0);
-
-        variable differnce : integer;
     begin
 
         if rst = '1' then
@@ -111,53 +108,53 @@ begin
                     end if;
                 when decode =>
                     -- Step 1: Decompose each number into sign, exponent, and mantissa
-                    signA     := getSign(FloatNumA);
-                    exponentA := getExponent(FloatNumA);
-                    mantissaA := getFraction(FloatNumA);
+                    signA     <= getSign(FloatNumA);
+                    exponentA <= getExponent(FloatNumA);
+                    mantissaA <= getFraction(FloatNumA);
             
-                    signB     := getSign(FloatNumB);
-                    exponentB := getExponent(FloatNumB);
-                    mantissaB := getFraction(FloatNumB);
+                    signB     <= getSign(FloatNumB);
+                    exponentB <= getExponent(FloatNumB);
+                    mantissaB <= getFraction(FloatNumB);
                     Done <= '0';
                     next_state <= shift;
 
                 when shift =>
                     -- Step 3: Align the mantissas
                     if exponentA > exponentB then
-                        mantissaB := ShiftRight(mantissaB, exponentA - exponentB);
-                        exponent  := exponentA;
+                        mantissaB <= ShiftRight(mantissaB, exponentA - exponentB);
+                        exponent  <= exponentA;
                     else
-                        mantissaA := ShiftRight(mantissaA, exponentB - exponentA);
-                        exponent  := exponentB;
+                        mantissaA <= ShiftRight(mantissaA, exponentB - exponentA);
+                        exponent  <= exponentB;
                     end if;
 
-                    differnce := exponentA - exponentB;
+                    differnce <= exponentA - exponentB;
                     
                     next_state <= add;
 
                 when add =>
                     -- Step 4: Add or subtract the mantissas based on the signs
                     if signA = signB then
-                        mantissa := std_logic_vector(unsigned(mantissaA) + unsigned(mantissaB));
-                        signO := signA;
+                        mantissa <= std_logic_vector(unsigned(mantissaA) + unsigned(mantissaB));
+                        signO <= signA;
                     else
                         if mantissaA > mantissaB then
-                            mantissa := std_logic_vector(unsigned(mantissaA) - unsigned(mantissaB));
-                            signO := signA;
+                            mantissa <= std_logic_vector(unsigned(mantissaA) - unsigned(mantissaB));
+                            signO <= signA;
                         else
-                            mantissa := std_logic_vector(unsigned(mantissaB) - unsigned(mantissaA));
-                            signO := signB;
+                            mantissa <= std_logic_vector(unsigned(mantissaB) - unsigned(mantissaA));
+                            signO <= signB;
                         end if;
                     end if;
-                    next_state <= shift;
+                    next_state <= output;
 
                 when output =>
                     -- Step 5: Normalize the result
-                    exponent := exponent + 127;
-                    mantissa := ShiftRight(mantissa, 1);
+                    exponent <= exponent + 127;
+                    mantissa <= ShiftRight(mantissa, 1);
                     if mantissa(23) = '1' then
-                        exponent := exponent + 1;
-                        mantissa := ShiftRight(mantissa, 1);
+                        exponent <= exponent + 1;
+                        mantissa <= ShiftRight(mantissa, 1);
                     end if;
 
 
