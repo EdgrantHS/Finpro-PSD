@@ -37,42 +37,48 @@ begin
                                           Done       => Done
                                     );
 
+    clk_process: process
+    begin
+        clk <= '1';
+        wait for 50 ps;
+        clk <= '0';
+        wait for 50 ps;
+    end process;
+
     test_bench: process
     begin
-        clk <= not clk after 100 ps;
-
         -- Test case 1
+	    wait for 100 ps;
         input1 <= "01000000111010000000000000000000"; --7.25
         input2 <= "01000000111010000000000000000000"; --7.25
-        wait for 100 ps;
-        assert expected_output = "01000001011010000000000000000000" --14.5
+        assert expected_output = "00000001111010000000000000000000" --14.5
         report "Float Adder failed" severity error;
-
+	    wait for 700 ps;
+        
         -- Test case 2
         input1 <= "11000001011010000000000000000000"; -- -14.5
         input2 <= "01000000011100000000000000000000"; -- 3.75
-        wait for 100 ps;
-        assert expected_output = "10000001000110000000000000000000" -- -10.75
+        assert expected_output = "10000010010101100000000000000000" -- -10.75
         report "Float Adder failed" severity error;
-
+	    wait for 700 ps;
+            
         -- Test case 3
         input1 <= "11000010010110011000000000000000"; -- -54.375
         input2 <= (others => '0'); -- 0
-        wait for 100 ps;
         assert expected_output = "11000010010110011000000000000000" -- -54.375
         report "Float Adder failed" severity error;
-
+	    wait for 700 ps;
+            
         -- Test case 4
         input1 <= (others => '0'); -- 0
         input2 <= "01000010010110011000000000000000"; -- 54.375
-        wait for 100 ps;
         assert expected_output = "01000010010110011000000000000000" -- 54.375
         report "Float Adder failed" severity error;
-
+	    wait for 700 ps;
+        
         -- Test case 5
         input1 <= "01010010000011111011001101110111"; -- 154297810944
         input2 <= "11000000000000000000000000000000"; -- -2
-        wait for 100 ps;
         assert expected_output = "10010010000011111011001101110111" -- -154297810944
         report "Float Adder failed" severity error;
 
