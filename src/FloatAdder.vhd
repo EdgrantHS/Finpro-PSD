@@ -17,7 +17,7 @@ end entity FloatAdder;
 
 architecture rtl of FloatAdder is
     --State Machine (idle -> fetch -> decode -> shift -> add -> shift -> output)
-    type StateType is (idle, fetch, decode, shift, add, output);
+    type StateType is (idle, fetch, decode, shift, add, normalize, output);
 
     signal state : StateType := idle;
     signal next_state : StateType := idle;
@@ -146,18 +146,19 @@ begin
                             signO <= signB;
                         end if;
                     end if;
-                    next_state <= output;
+                    next_state <= normalize;
 
-                when output =>
+                when normalize =>
                     -- Step 5: Normalize the result
                     exponent <= exponent + 127;
-                    mantissa <= ShiftRight(mantissa, 1);
+                    mantissa <= std_logic_vector(Shift_Right(unsigned(mantissa), 1));
                     if mantissa(23) = '1' then
                         exponent <= exponent + 1;
                         mantissa <= ShiftRight(mantissa, 1);
                     end if;
-
-
+                    next_state <= output;
+                    
+                when output =>
                     -- Step 6: Assemble the result
                     FloatOut <= Assemble(signO, exponent, mantissa);
                     CarryFlag <= '0';
@@ -175,7 +176,7 @@ begin
     begin
         if rst = '1' then
             state <= idle;
-        elsif rising_edge(clk) then
+        elsif falling_edge(clk) then
             state <= next_state;
         end if;
     end process state_machine;
